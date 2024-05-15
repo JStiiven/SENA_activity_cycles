@@ -1,0 +1,15 @@
+import javax.swing.JOptionPane;
+
+public class CicloDos {
+	public static void main(String [] args) {
+		int menu=0;
+		
+		do {
+			String entrada = "MENU DE OPCIONES\n\n";
+			entrada+= "1. Saludar\n";
+			entrada+= "2. Pedir Nombre de una Persona\n";
+			entrada+= "1. Sumar 2 Numeros\n";
+			menu=Integer.parseInt(JOptionPane.showInputDialog(entrada));
+		} while (condition);
+	}
+}

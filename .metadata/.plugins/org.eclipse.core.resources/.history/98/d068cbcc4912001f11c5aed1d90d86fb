@@ -1,0 +1,41 @@
+import javax.swing.JOptionPane;
+
+public class CicloDos {
+	public static void main(String [] args) {
+		int menu=0;
+		String nombre="";
+		int n1=0;
+		int n2=0;
+		
+		do {
+			String entrada = "MENU DE OPCIONES\n\n";
+			entrada+= "1. Saludar\n";
+			entrada+= "2. Pedir Nombre de una Persona\n";
+			entrada+= "3. Sumar 2 Numeros\n";
+			entrada+= "4. Salir\n";
+			menu=Integer.parseInt(JOptionPane.showInputDialog(entrada));
+			
+			switch (menu) {
+			case 1:
+				JOptionPane.showMessageDialog(null, "Hola! Como estas!!");
+				break;
+			case 2:
+				nombre=JOptionPane.showInputDialog("Ingrese un nombre:");
+				JOptionPane.showMessageDialog(null, "El nombre ingresado es: "+nombre);
+				break;
+			case 3:
+				n1=Integer.parseInt(JOptionPane.showInputDialog("Ingrese el primer valor"));
+				n2=Integer.parseInt(JOptionPane.showInputDialog("Ingrese el segundo valor"));
+				int sum = n1+n2;
+				JOptionPane.showMessageDialog(null, "La suma entre "+n1+" y "+n2+" es: "+sum);
+				break;
+			case 4:
+				JOptionPane.showMessageDialog(null, "Adios!");
+				break;
+			default:
+				JOptionPane.showMessageDialog(null, "El numero ingresado no existe","ADVERTENCIA", JOptionPane.WARNING_MESSAGE);
+				break;
+			}
+		} while (menu!=4);
+	}
+}
